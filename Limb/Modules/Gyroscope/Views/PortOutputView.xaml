@@ -13,7 +13,13 @@
         <TreeView ItemsSource="{Binding Connectors}">
             <TreeView.Resources>
                 <DataTemplate DataType="{x:Type vm:GyroscopeViewModel}">
-                    <StackPanel Orientation="Horizontal" cal:Message.Attach="[Event MouseDown] = [Action Open3DViewer()];">
+                    <StackPanel Orientation="Horizontal" cal:Message.Attach="[Event MouseDown] = [Action OpenEditor()];">
+                        <StackPanel.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Open 3D viewer" cal:Message.Attach="Open3DViewer()"/>
+                                <MenuItem Header="Open editor" cal:Message.Attach="OpenEditor()" />
+                            </ContextMenu>
+                        </StackPanel.ContextMenu>
                         <TextBlock Text="{Binding Name}"></TextBlock>    
                     </StackPanel>
                 </DataTemplate>

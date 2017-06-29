@@ -57,6 +57,7 @@ namespace Limb.Modules.Scene.Views
             {
                 foreach (ISceneObject newItem in notifyCollectionChangedEventArgs.NewItems)
                 {
+                   // newItem.OnLoad(_graphicsDevice);
                 }
             }
         }
@@ -152,8 +153,7 @@ namespace Limb.Modules.Scene.Views
 
                 if (Keyboard.IsKeyDown(Key.LeftCtrl))
                     _cameraPosition -= Vector3.UnitY * CameraMoveSpeed;
-
-                //GraphicsControl.Invalidate();
+                
             }
 
             //_geometricPrimitives[_primitiveIndex].Draw(_effect);

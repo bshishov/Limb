@@ -53,6 +53,10 @@
       <HintPath>..\packages\Gemini.Modules.Inspector.1.0.6121\lib\net45\Gemini.Modules.Inspector.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Gemini.Modules.PropertyGrid, Version=1.0.6121.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gemini.Modules.PropertyGrid.1.0.6121\lib\net45\Gemini.Modules.PropertyGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Gemini.Modules.SharpDX, Version=1.0.6121.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Gemini.Modules.SharpDX.1.0.6121\lib\net45\Gemini.Modules.SharpDX.dll</HintPath>
       <Private>True</Private>

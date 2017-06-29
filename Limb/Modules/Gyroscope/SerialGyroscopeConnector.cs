@@ -52,17 +52,17 @@ namespace Limb.Modules.Gyroscope
                     var data = line.Split('\t');
                     if (data.Length > 10)
                     {
-                        _a.Z = -Convert.ToSingle(data[1]);
-                        _a.Y = -Convert.ToSingle(data[2]);
-                        _a.X = Convert.ToSingle(data[3]);
+                        _a.X = Convert.ToSingle(data[1]);
+                        _a.Y = Convert.ToSingle(data[2]);
+                        _a.Z = Convert.ToSingle(data[3]);
 
-                        _g.Z = -Convert.ToSingle(data[4]);
-                        _g.Y = -Convert.ToSingle(data[5]);
-                        _g.X = Convert.ToSingle(data[6]);
+                        _g.X = Convert.ToSingle(data[4]);
+                        _g.Y = Convert.ToSingle(data[5]);
+                        _g.Z = Convert.ToSingle(data[6]);
 
-                        _m.Z = -Convert.ToSingle(data[7]);
-                        _m.Y = -Convert.ToSingle(data[8]);
-                        _m.X = Convert.ToSingle(data[9]);
+                        _m.X = Convert.ToSingle(data[7]);
+                        _m.Y = Convert.ToSingle(data[8]);
+                        _m.Z = Convert.ToSingle(data[9]);
                     }
                 }
                 catch (IOException exception)

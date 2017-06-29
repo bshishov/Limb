@@ -2,6 +2,7 @@
 using System.Linq;
 using Caliburn.Micro;
 using Gemini.Modules.Inspector;
+using Gemini.Modules.PropertyGrid;
 
 namespace Limb.Modules.Gyroscope.ViewModels
 {
@@ -30,6 +31,9 @@ namespace Limb.Modules.Gyroscope.ViewModels
 
         public void OpenEditor()
         {
+            var propertyGrid = IoC.Get<IPropertyGrid>();
+            propertyGrid.SelectedObject = _connector;
+
             IoC.Get<IInspectorTool>().SelectedObject =
                 new InspectableObjectBuilder().WithObjectProperties(_connector, x => true).ToInspectableObject();
         }
